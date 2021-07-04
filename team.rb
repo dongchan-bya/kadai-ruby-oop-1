@@ -16,7 +16,7 @@ Class Team
   end
   def calc_win_rate(rate)
     rate = win.to_f / win + lose
-  puts "#{name}の2020年の成績は #{self.win} #{self.lose} #{draw}、勝率は#{rate}です。"
+  puts "#{name}の2020年の成績は #{win} #{lose} #{draw}、勝率は#{rate}です。"
   end 
 end　
    Team_A.show_team_result('Gians')
@@ -46,6 +46,5 @@ end　
    Team_D = draw.new('6分')
    Team_E = draw.new('12分')
    Team_F = draw.new('10分')
-
-  p Team
+P Tanm
   
