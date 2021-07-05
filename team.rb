@@ -1,5 +1,4 @@
-Class Team
-
+class Team
   attr_accessor :nanm, :win, :lose, :draw
   
   def initialize(team_name, team_win, team_lose, team_draw)
@@ -7,44 +6,60 @@ Class Team
   self.team_win = win
   self.team_lose = lose
   self.team_draw = draw
-　end
-　def cal_win_rate
-    win.t_f / win + lose
   end
-  def show_team_result(name)
   
+  def show_team_result(name)
   end
+  
+  def attack(win)
+  end 
+  
+  def defend(lose)
+  end 
+  
+  def wari(draw)
+  end
+  
   def calc_win_rate(rate)
     rate = win.to_f / win + lose
-  puts "#{name}の2020年の成績は #{win} #{lose} #{draw}、勝率は#{rate}です。"
-  end 
-end　
-   Team_A.show_team_result('Gians')
- 　Team_B.show_team_resultnew('Tigers')
-   Team_C.show_team_result('Dragons')
-   Team_D.show_team_result('BayStars')
-   Team_E.show_team_result('Carp')
-   Team_F.show_team_result('Swallows')
-   
-   Team_A = win.new('67勝')
-   Team_B = win.new('60勝')
-   Team_C = win.new('60勝')
-   Team_D = win.new('56勝')
-   Team_E = win.new('52勝')
-   Team_F = win.new('41勝')
-   
-   Team_A = lose.new('45敗')
-   Team_B = lose.new('53敗')
-   Team_C = lose.new('55敗')
-   Team_D = lose.new('58敗')
-   Team_E = lose.new('56敗')
-   Team_F = lose.new('69敗')
-   
-   Team_A = draw.new('8分')
-   Team_B = draw.new('7分')
-   Team_C = draw.new('5分')
-   Team_D = draw.new('6分')
-   Team_E = draw.new('12分')
-   Team_F = draw.new('10分')
-P Tanm
-  
+  puts "#{name}の2020年の成績は #{self.win} #{self.lose} #{draw}、勝率は#{rate}です。"
+  end
+end
+　 team_A = Team.new
+　 team_B = Team.new
+　 team_C = Team.new
+　 team_D = Team.new
+　 team_E = Team.new
+　 team_F = Team.new
+　 
+   team_A.show_team_result('Gians')
+   team_B.show_team_resultnew('Tigers')
+   team_C.show_team_result('Dragons')
+   team_D.show_team_result('BayStars')
+   team_E.show_team_result('Carp')
+   team_F.show_team_result('Swallows')
+   team_A.attack('67勝')
+   team_B.attack('60勝')
+   team_C.attack('60勝')
+   team_D.attack('56勝')
+   team_E.attack('52勝')
+   team_F.attack('41勝')
+   team_A.defend('45敗')
+   team_B.defend('53敗')
+   team_C.defend('55敗')
+   team_D.defend('58敗')
+   team_E.defend('56敗')
+   team_F.defend('69敗')
+   team_A.wari('8分')
+   team_B.wari('7分')
+   team_C.wari('5分')
+   team_D.wari('6分')
+   team_E.wari('12分')
+   team_F.wari('10分')
+     P team_A
+     p team_B
+     P team_C
+     p team_C
+     p team_D
+     p team_E
+     p team_F
