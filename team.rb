@@ -1,65 +1,33 @@
 class Team
-  attr_accessor :nanm, :win, :lose, :draw
+  attr_accessor :name, :win, :lose, :draw,
   
-  def initialize(team_name, team_win, team_lose, team_draw)
-  self.team_name = name
-  self.team_win = win
-  self.team_lose = lose
-  self.team_draw = draw
+  def initialize(name, win, lose, draw)
+    self.name = name
+    self.win = win
+    self.lose = lose
+    self.draw = draw
   end
-  
-  def show_team_result(name)
-  end
-  
-  def attack(win)
+   
+  def show_team_result
+    puts "#{self.name}の2020年の成績は #{self.win}勝 #{self.lose}敗 #{self.draw}分、勝率は#{self.calc_win_rate}です。"
   end 
-  
-  def defend(lose)
-  end 
-  
-  def wari(draw)
+  def calc_win_rate
+    rate = self.win.to_f / self.win + self.lose
+    return rate
   end
   
-  def calc_win_rate(rate)
-    rate = win.to_f / win + lose
-  puts "#{name}の2020年の成績は #{self.win} #{self.lose} #{draw}、勝率は#{rate}です。"
-  end
 end
-　 team_A = Team.new
-　 team_B = Team.new
-　 team_C = Team.new
-　 team_D = Team.new
-　 team_E = Team.new
-　 team_F = Team.new
-　 
-   team_A.show_team_result('Gians')
-   team_B.show_team_resultnew('Tigers')
-   team_C.show_team_result('Dragons')
-   team_D.show_team_result('BayStars')
-   team_E.show_team_result('Carp')
-   team_F.show_team_result('Swallows')
-   team_A.attack('67勝')
-   team_B.attack('60勝')
-   team_C.attack('60勝')
-   team_D.attack('56勝')
-   team_E.attack('52勝')
-   team_F.attack('41勝')
-   team_A.defend('45敗')
-   team_B.defend('53敗')
-   team_C.defend('55敗')
-   team_D.defend('58敗')
-   team_E.defend('56敗')
-   team_F.defend('69敗')
-   team_A.wari('8分')
-   team_B.wari('7分')
-   team_C.wari('5分')
-   team_D.wari('6分')
-   team_E.wari('12分')
-   team_F.wari('10分')
-     P team_A
-     p team_B
-     P team_C
-     p team_C
-     p team_D
-     p team_E
-     p team_F
+  
+    team_1 = Team.new("Gians", 67, 45, 8)
+    team_2 = Team.new("Tigers", 60, 53, 7)
+    team_3 = Team.new("Dragons", 60, 55, 5)
+    team_4 = Team.new("BayStars", 56, 58, 6)
+    team_5 = Team.new("Carp", 52, 56, 12)
+    team_6 = Team.new("Swallows", 41, 69, 10)
+    
+    team_1.show_team_result
+    team_2.show_team_result
+    team_3.show_team_result
+    team_4.show_team_result
+    team_5.show_team_result
+    team_6.show_team_result
